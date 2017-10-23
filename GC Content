@@ -1,0 +1,51 @@
+#### ---- GC Content Homework Assignment ---- ####
+
+
+# The following will display the working nucleotide sequence
+
+print ("Analyze the following nucleotide sequence: ")
+flu_ns1_seq = 'GTGACAAAGACATAATGGATCCAAACACTGTGTCAAGCTTTCAGGTAGATTGCTTTCTTTGGCATGTCCGCAAACGAGTTGCAGACCAAGAACTAGGTGA'
+print (flu_ns1_seq)
+
+
+# Next, we'll put the string flu_ns1_seq in a readable format to calculate GC Content
+## We'll need a list!
+
+print (type(flu_ns1_seq))                   # Shows variable type for flu_ns1_seq
+characters = list(flu_ns1_seq)              # Makes flu_ns1_seq into a list called characters
+print (type (characters))                   # Shows variable type for characters
+print ("Now we have a list")
+
+
+# Determine how many C and G nucleotides are in the list 'characters'
+
+C_count = characters.count('C')             # This is the C Content
+G_count = characters.count('G')             # This is the G Content
+
+## Next we'll need to sum these two character counts
+
+GC_sum = G_count + C_count
+print (GC_sum)
+print ("Now we know the sum of G and C nucleotides are in flu_ns1_seq")
+
+
+# We need to determine how many total nucleotides are in flu_ns1_seq
+
+print ("The total amount of nucleotides in flu_ns1_seq is: ")
+All_nucleotides = characters.count('A') + characters.count('T') + characters.count('C') + characters.count('G')
+print (All_nucleotides)
+
+
+# Finally we need to divide the GC content by the total number of nucleotides
+print ("Now will determine GC content of flu_ns1_seq")
+print ("Recall that the GC sum is: ")
+print (GC_sum)
+print ("And the total amount of nucleotides is: ")
+print (All_nucleotides)
+print ("So the GC content of the flu_ns1_seq sequence is: ")
+GC_content = GC_sum / All_nucleotides
+print (GC_content)
+
+## As a percentage
+GC_percent = GC_content * 100
+print (GC_percent)
